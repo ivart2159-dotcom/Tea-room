@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<script>
+function searchItem() {
+    let value = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".menu-card");
+
+    cards.forEach(card => {
+        card.classList.remove("active-search");
+    });
+
+    for (let card of cards) {
+        let text = card.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+            card.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            card.classList.add("active-search");
+            return;
+        }
+    }
+
+    alert("Ничего не найдено");
+}
+</script>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo"><a href="index.html">Чайный дом «Уют»</a></div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="menu.html">Меню</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<h1 class="title-main">Меню</h1>
+
+<!-- поиск -->
+
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Введите чай или десерт...">
+  <button onclick="searchItem()">Найти</button>
+</div>
+
+<!-- фильтр -->
+
+<div class="filters">
+  <a href="#tea">Чай</a>
+  <a href="#desserts">Десерты</a>
+  <a href="#">Все</a>
+</div>
+
+<a href="#" class="to-top">↑</a>
+
+<!-- ЧАЙ -->
+
+<h2 id="tea" class="title-section">Чай</h2>
+<div class="menu-grid">
+
+<a href="#item0" class="menu-card" id="tea-green">
+<div class="badge hit">Хит</div>
+<img src="images/teaa1.jpg">
+<h3>Зелёный чай</h3>
+<p class="price">160 ₽</p>
+</a>
+
+<a href="#item1" class="menu-card">
+<img src="images/teaa2.jpg" height="220">
+<h3>Чёрный чай</h3>
+<p class="price">170 ₽</p>
+</a>
+
+<a href="#item2" class="menu-card">
+<div class="badge hit">Хит</div>
+<img src="images/teaa3.jpg" height="220">
+<h3>Молочный улун</h3>
+<p class="price">180 ₽</p>
+</a>
+
+<a href="#item3" class="menu-card" id="cappuccino">
+<img src="images/teaa4.jpg" height="220">
+<h3>Матча</h3>
+<p class="price">190 ₽</p>
+</a>
+
+<a href="#item4" class="menu-card" id="latte">
+<img src="images/teaa5.jpg" height="220">
+<h3>Чай с молоком</h3>
+<p class="price">200 ₽</p>
+</a>
+
+<a href="#item5" class="menu-card" id="tea-chine">
+<div class="badge hit">Хит</div>
+<img src="images/teaa6.jpg" height="220">
+<h3>Би Ло Чунь</h3>
+<p class="price">210 ₽</p>
+</a>
+
+<a href="#item6" class="menu-card">
+<img src="images/teaa7.jpg" height="220">
+<h3>Красный чай</h3>
+<p class="price">220 ₽</p>
+</a>
+
+<a href="#item7" class="menu-card">
+<img src="images/teaa8.jpg" height="220">
+<h3>Шу пуэр</h3>
+<p class="price">230 ₽</p>
+</a>
+
+<a href="#item8" class="menu-card">
+<img src="images/teaa9.jpg" height="220">
+<h3>Жасминовый чай</h3>
+<p class="price">240 ₽</p>
+</a>
+
+<a href="#item9" class="menu-card">
+<img src="images/teaa10.jpg" height="220">
+<h3>Холодный чай со льдом</h3>
+<p class="price">250 ₽</p>
+</a>
+
+<a href="#item10" class="menu-card">
+<img src="images/teaa11.jpg" height="220">
+<h3>Чай с мёдом</h3>
+<p class="price">240 ₽</p>
+</a>
+
+<a href="#item11" class="menu-card" id="tealemon">
+<img src="images/tea35.jpg" height="220">
+<h3>Чай с лимоном</h3>
+<p class="price">240 ₽</p>
+</a>
+
+<a href="#item12" class="menu-card">
+<img src="images/teaa13.png" height="220">
+<h3>Имбирный чай c лимоном</h3>
+<p class="price">240 ₽</p>
+</a>
+
+<a href="#item13" class="menu-card" id="raspberry-tea">
+<div class="badge new">Новинка</div>
+<img src="images/teaa14.jpg" height="220">
+<h3>Чай с малиной и мятой</h3>
+<p class="price">240 ₽</p>
+</a>
+
+<a href="#item24" class="menu-card" id="tea-dark-tea">
+<div class="badge hit">Хит</div>
+<img src="images/teaa15.jpg" height="220">
+<h3>Да Хун Пао</h3>
+<p class="price">260 ₽</p>
+</a>
+
+<a href="#item25" class="menu-card">
+<img src="images/teaa16.jpg" height="220">
+<h3>Облепиховый чай</h3>
+<p class="price">240 ₽</p>
+</a>
+
+<a href="#item26" class="menu-card">
+<img src="images/teaa17.jpg" height="220">
+<h3>Тайский синий чай</h3>
+<p class="price">210 ₽</p>
+</a>
+
+<a href="#item27" class="menu-card" id="tea-gretcha">
+<div class="badge new">Новинка</div>
+<img src="images/teaa18.jpg" height="220">
+<h3>Гречишный чай (Ку Цяо)</h3>
+<p class="price">190 ₽</p>
+</a>
+
+</div>
+
+<!-- ДЕСЕРТЫ -->
+
+<h2 id="desserts" class="title-section">Десерты</h2>
+<div class="menu-grid">
+
+<a href="#item14" class="menu-card">
+<img src="images/desert1.jpg" height="220">
+<h3>Тирамису</h3>
+<p class="price">195 ₽</p>
+</a>
+
+<a href="#item15" class="menu-card" id="moti">
+<img src="images/desert2.jpg" height="220">
+<h3>Моти</h3>
+<p class="price">210 ₽</p>
+</a>
+
+<a href="#item16" class="menu-card">
+<img src="images/desert3.jpg" height="220">
+<h3>Паштел де ната</h3>
+<p class="price">225 ₽</p>
+</a>
+
+<a href="#item17" class="menu-card">
+<img src="images/desert4.jpg" height="220">
+<h3>Пахлава</h3>
+<p class="price">240 ₽</p>
+</a>
+
+<a href="#item18" class="menu-card">
+<img src="images/desert5.jpg" height="220">
+<h3>Панна котта</h3>
+<p class="price">255 ₽</p>
+</a>
+
+<a href="#item19" class="menu-card" id="macaron">
+<div class="badge new">Новинка</div>
+<img src="images/desert6.jpg" height="220">
+<h3>Макарон</h3>
+<p class="price">270 ₽</p>
+</a>
+
+<a href="#item20" class="menu-card" id="cheesecake">
+<img src="images/desert7.jpg" height="220">
+<h3>Чизкейк</h3>
+<p class="price">285 ₽</p>
+</a>
+
+<a href="#item21" class="menu-card">
+<img src="images/desert8.jpg" height="220">
+<h3>Крем-брюле</h3>
+<p class="price">300 ₽</p>
+</a>
+
+<a href="#item22" class="menu-card">
+<div class="badge new">Новинка</div>
+<img src="images/desert9.jpg" height="220">
+<h3>Торт вишневый</h3>
+<p class="price">315 ₽</p>
+</a>
+
+<a href="#item23" class="menu-card">
+<img src="images/desert10.jpg" height="220">
+<h3>Брауни</h3>
+<p class="price">330 ₽</p>
+</a>
+
+
+
+</div>
+
+</div>
+
+<!-- МОДАЛКИ -->
+
+<div id="item0" class="modal">
+  <div class="modal-content">
+    <h2>Зелёный чай</h2>
+    <p>Описание: Лёгкий и освежающий чай с мягким травянистым вкусом и тонким ароматом. Отлично бодрит и дарит ощущение свежести.</p>
+    <p>Калорийность: 5 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 160 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item1" class="modal">
+  <div class="modal-content">
+    <h2>Чёрный чай</h2>
+    <p>Описание: Классический насыщенный чай с глубоким вкусом и приятной терпкостью. Идеален для уютного чаепития.</p>
+    <p>Калорийность: 6 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 170 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item2" class="modal">
+  <div class="modal-content">
+    <h2>Молочный улун</h2>
+    <p>Описание: Нежный элитный чай с кремовыми нотками, мягким вкусом и сладковатым послевкусием.</p>
+    <p>Калорийность: 8 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 180 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item3" class="modal">
+  <div class="modal-content">
+    <h2>Матча</h2>
+    <p>Описание: Японский порошковый зелёный чай с насыщенным вкусом, ярким цветом и бодрящим эффектом.</p>
+    <p>Калорийность: 18 ккал</p>
+    <p>Граммовка: 350 мл</p>
+    <p>Цена: 190 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item4" class="modal">
+  <div class="modal-content">
+    <h2>Чай с молоком</h2>
+    <p>Описание: Нежный ароматный чай с добавлением молока. Мягкий вкус и приятная сливочная текстура.</p>
+    <p>Калорийность: 65 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 200 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item5" class="modal">
+  <div class="modal-content">
+    <h2>Би Ло Чунь</h2>
+    <p>Описание: Китайский зелёный чай премиум-класса с фруктовыми оттенками и свежим ароматом весенних листьев.</p>
+    <p>Калорийность: 4 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 210 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item6" class="modal">
+  <div class="modal-content">
+    <h2>Красный чай</h2>
+    <p>Описание: Ароматный чай с насыщенным вкусом, медовыми нотками и согревающим эффектом.</p>
+    <p>Калорийность: 6 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 220 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item7" class="modal">
+  <div class="modal-content">
+    <h2>Шу пуэр</h2>
+    <p>Описание: Выдержанный китайский чай с глубоким древесным ароматом и мягким землистым вкусом.</p>
+    <p>Калорийность: 5 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 230 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item8" class="modal">
+  <div class="modal-content">
+    <h2>Жасминовый чай</h2>
+    <p>Описание: Лёгкий зелёный чай с тонким цветочным ароматом жасмина и приятным мягким вкусом.</p>
+    <p>Калорийность: 5 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 240 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item9" class="modal">
+  <div class="modal-content">
+    <h2>Холодный чай со льдом</h2>
+    <p>Описание: Освежающий охлаждённый чай со льдом, идеально подходит для жаркого дня.</p>
+    <p>Калорийность: 28 ккал</p>
+    <p>Граммовка: 450 мл</p>
+    <p>Цена: 250 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item10" class="modal">
+  <div class="modal-content">
+    <h2>Чай с мёдом</h2>
+    <p>Описание: Согревающий чай с натуральным мёдом. Мягкий вкус и приятный аромат.</p>
+    <p>Калорийность: 55 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 240 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item11" class="modal">
+  <div class="modal-content">
+    <h2>Чай с лимоном</h2>
+    <p>Описание: Классический чай с долькой лимона. Освежающий вкус с лёгкой кислинкой.</p>
+    <p>Калорийность: 18 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 240 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item12" class="modal">
+  <div class="modal-content">
+    <h2>Имбирный чай с лимоном</h2>
+    <p>Описание: Пряный согревающий чай с имбирём и лимоном. Отлично бодрит и согревает.</p>
+    <p>Калорийность: 30 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 240 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item13" class="modal">
+  <div class="modal-content">
+    <h2>Чай с малиной и мятой</h2>
+    <p>Описание: Ароматный ягодный чай с малиной и свежей мятой. Нежный и яркий вкус.</p>
+    <p>Калорийность: 35 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 240 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item14" class="modal">
+  <div class="modal-content">
+    <h2>Тирамису</h2>
+    <p>Описание: Итальянский десерт с нежным кремом маскарпоне, печеньем савоярди и ароматом кофе.</p>
+    <p>Калорийность: 290 ккал</p>
+    <p>Граммовка: 150 г</p>
+    <p>Цена: 195 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item15" class="modal">
+  <div class="modal-content">
+    <h2>Моти</h2>
+    <p>Описание: Японский рисовый десерт с нежной текстурой и сладкой начинкой внутри.</p>
+    <p>Калорийность: 210 ккал</p>
+    <p>Граммовка: 120 г</p>
+    <p>Цена: 210 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item16" class="modal">
+  <div class="modal-content">
+    <h2>Паштел де ната</h2>
+    <p>Описание: Португальская корзиночка из слоёного теста с нежным ванильным кремом.</p>
+    <p>Калорийность: 260 ккал</p>
+    <p>Граммовка: 130 г</p>
+    <p>Цена: 225 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item17" class="modal">
+  <div class="modal-content">
+    <h2>Пахлава</h2>
+    <p>Описание: Восточный десерт из тонкого теста, орехов и сладкого сиропа.</p>
+    <p>Калорийность: 320 ккал</p>
+    <p>Граммовка: 140 г</p>
+    <p>Цена: 240 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item18" class="modal">
+  <div class="modal-content">
+    <h2>Панна котта</h2>
+    <p>Описание: Нежный сливочный итальянский десерт с ванильным вкусом и ягодным соусом.</p>
+    <p>Калорийность: 250 ккал</p>
+    <p>Граммовка: 160 г</p>
+    <p>Цена: 255 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item19" class="modal">
+  <div class="modal-content">
+    <h2>Макарон</h2>
+    <p>Описание: Французское миндальное печенье с нежной кремовой начинкой.</p>
+    <p>Калорийность: 230 ккал</p>
+    <p>Граммовка: 90 г</p>
+    <p>Цена: 270 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item20" class="modal">
+  <div class="modal-content">
+    <h2>Чизкейк</h2>
+    <p>Описание: Нежный сливочный десерт на песочной основе с мягким ванильным вкусом.</p>
+    <p>Калорийность: 350 ккал</p>
+    <p>Граммовка: 170 г</p>
+    <p>Цена: 285 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item21" class="modal">
+  <div class="modal-content">
+    <h2>Крем-брюле</h2>
+    <p>Описание: Французский десерт с нежным кремом и карамельной хрустящей корочкой.</p>
+    <p>Калорийность: 300 ккал</p>
+    <p>Граммовка: 160 г</p>
+    <p>Цена: 300 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item22" class="modal">
+  <div class="modal-content">
+    <h2>Торт вишневый</h2>
+    <p>Описание: Воздушный торт с вишнёвой начинкой, кремом и лёгкой кислинкой ягод.</p>
+    <p>Калорийность: 370 ккал</p>
+    <p>Граммовка: 180 г</p>
+    <p>Цена: 315 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item23" class="modal">
+  <div class="modal-content">
+    <h2>Брауни</h2>
+    <p>Описание: Насыщенный шоколадный десерт с влажной текстурой и ярким вкусом какао.</p>
+    <p>Калорийность: 380 ккал</p>
+    <p>Граммовка: 170 г</p>
+    <p>Цена: 330 ₽</p>
+    <a href="#desserts" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item24" class="modal">
+  <div class="modal-content">
+    <h2>Да Хун Пао</h2>
+    <p>Описание: Знаменитый утесный китайский чай сильной ферментации. Обладает глубоким, слегка дымным вкусом с нотками сухофруктов и долгим согревающим послевкусием.</p>
+    <p>Калорийность: 4 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Price: 260 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item25" class="modal">
+  <div class="modal-content">
+    <h2>Облепиховый чай</h2>
+    <p>Описание: Натуральный ягодный чай с ярким вкусом спелой облепихи, легкой кислинкой и добавлением пряного меда. Отличный выбор для укрепления иммунитета.</p>
+    <p>Калорийность: 45 ккал</p>
+    <p>Граммовка: 450 мл</p>
+    <p>Цена: 240 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item26" class="modal">
+  <div class="modal-content">
+    <h2>Тайский синий чай</h2>
+    <p>Описание: Экзотический настой из цветков клитории (Анчан). Имеет удивительный ярко-синий цвет, мягкий травянистый вкус и успокаивающий эффект. При добавлении лимона меняет цвет на фиолетовый!</p>
+    <p>Калорийность: 2 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 210 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<div id="item27" class="modal">
+  <div class="modal-content">
+    <h2>Гречишный чай (Ку Цяо)</h2>
+    <p>Описание: Полезный напиток из татарской черной гречихи. Обладает уникальным ароматом свежей выпечки и нежным овсяно-песочным вкусом.</p>
+    <p>Калорийность: 12 ккал</p>
+    <p>Граммовка: 400 мл</p>
+    <p>Цена: 190 ₽</p>
+    <a href="#tea" class="close">Закрыть</a>
+  </div>
+</div>
+
+<footer class="footer-new">
+
+  <div class="container footer-grid">
+
+    <!-- БРЕНД -->
+    <div class="footer-box">
+      <h3>Чайный дом «Уют»</h3>
+      <p>
+        Тёплый чай, домашние десерты и атмосфера спокойствия каждый день.
+        Место, куда хочется возвращаться снова.
+      </p>
+    </div>
+
+    <!-- НАВИГАЦИЯ -->
+    <div class="footer-box">
+      <h4>Навигация</h4>
+      <a href="index.html">Главная</a>
+      <a href="menu.html">Меню</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+
+    <!-- КОНТАКТЫ -->
+    <div class="footer-box">
+      <h4>Контакты</h4>
+      <p>📍 Майкоп, ст. Ханская, ул. Ленина 54</p>
+      <p>📞 +7 (962) 861-08-15</p>
+      <p>🕐 Ежедневно: 10:00 – 22:00</p>
+      <p>✉ tea-uyut@mail.ru</p>
+    </div>
+
+    <!-- СОЦСЕТИ -->
+    <div class="footer-box">
+      <h4>Мы онлайн</h4>
+      <a href="https://ok.ru/profile/910107574847">Одноклассники</a>
+      <a href="https://vk.com/bvfh1997">VK</a>
+      <a href="https://t.me/Tetokago">Telegram</a>
+      <a href="https://chat.whatsapp.com/HswV13W2cLyAxVpJfPEC1D">WhatsApp</a>
+    </div>
+
+  </div>
+
+  <!-- НИЖНЯЯ ПОЛОСА -->
+  <div class="footer-bottom">
+    <span>© 2026 Чайный дом «Уют»</span>
+    <span>Сделано с теплом ☕</span>
+  </div>
+
+</footer>
+
+</body>
+</html>
