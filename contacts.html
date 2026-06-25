@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Контакты — Чайный дом «Уют»</title>
+</head>
+
+<body>
+
+<header>
+  <div class="container" style="display: flex; align-items: center; justify-content: space-between; position: relative;">
+    
+    <div class="header-left-menu-box">
+      <a href="#side-navigation-panel" class="side-nav-trigger-btn">☰ Разделы</a>
+    </div>
+
+<div class="logo">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo6.jpg" alt="Логотип" class="logo-icon">
+    <span>Чайный дом «Уют»</span>
+  </a>
+</div>
+    
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="menu.html">Меню</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    </div>
+
+  </div>
+</header>
+
+<main class="contacts-page">
+
+  <h1 class="title-main">Свяжитесь с нами</h1>
+
+  <section class="contact-info container">
+    <div class="contact-card">
+      <h3>📍 Адрес</h3>
+      <p>Майкоп, Станица Ханская, ул. Ленина 54</p>
+    </div>
+
+    <div class="contact-card">
+      <h3>📞 Телефон</h3>
+      <p><a href="tel:+79628610815">+7 (962) 861-08-15</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>🕐 Время работы</h3>
+      <p>10:00 – 22:00 ежедневно</p>
+    </div>
+  </section>
+
+<section class="booking container">
+    
+
+    
+    <h2 class="title-section">
+        Бронирование столика
+      <a href="#rules-popup" class="book-hint-trigger-btn" title="Информация о бронировании">?</a>
+    </h2>
+
+    <div id="rules-popup" class="book-hint-overlay">
+      <div class="book-hint-container">
+        <a href="#" class="book-hint-close-cross">×</a>
+        <h3>Правила бронирования 🍵</h3>
+        <ul>
+          <li><b>Время работы:</b> Бронирование доступно ежедневно с 10:00 до 22:00.</li>
+          <li><b>Длительность брони:</b> Стол сохраняется за вами в течение 20 минут от указанного времени. Если вы опаздываете, пожалуйста, предупредите нас по телефону.</li>
+          <li><b>Большие компании:</b> Форма рассчитана на компании до 10 человек. Если вас больше, свяжитесь с нами напрямую.</li>
+          <li><b>Бесплатно:</b> Бронирование столов в нашей чайной абсолютно бесплатное!</li>
+        </ul>
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="#" class="btn" style="min-width: auto; padding: 8px 20px;">Понятно</a>
+        </div>
+      </div>
+    </div>
+
+<section class="booking-section container">
+  <form action="https://formspree.io/f/mzdkeprk" method="POST" class="booking-form" id="bookingForm">
+
+    <label>Ваше имя</label>
+    <input type="text" name="name" placeholder="Например: Иван" minlength="2" maxlength="30" required>
+
+    <label>Телефон</label>
+    <input type="tel" name="phone" placeholder="+7 (999) 123-45-67"
+      pattern="[0-9+()\\-\\s]{10,18}" required>
+
+    <label>Дата бронирования</label>
+    <input type="date" name="date" min="2026-01-01" required>
+
+    <label>Время</label>
+    <input type="time" name="time" min="10:00" max="22:00" required>
+
+    <label>Количество гостей</label>
+    <input type="number" name="people" placeholder="От 1 до 10" min="1" max="10" required>
+    
+    <label>Комментарий (необязательно)</label>
+    <textarea name="comment" placeholder="Например: столик у окна, есть ли аллергия" maxlength="200"></textarea>
+
+    <input type="hidden" name="_subject" value="Новая бронь столика">
+
+    <button type="submit" class="btn">Забронировать столик</button>
+
+  </form>
+</section>
+
+ <section class="contact-extra container">
+  <div class="contact-box premium-social">
+    <h3>Мы в соцсетях</h3>
+    <div class="social-premium">
+
+      <a href="https://ok.ru/profile/910107574847" target="_blank" class="soc ok">
+        <img src="images/odnoklassniki.png" alt="OK" class="soc-img"> Одноклассники
+      </a>
+
+      <a href="https://vk.com/bvfh1997" target="_blank" class="soc vk">
+        <img src="images/free-icon-vk-3670055.png" alt="VK" class="soc-img"> ВКонтакте
+      </a>
+
+      <a href="https://t.me/Tetokago" target="_blank" class="soc tg">
+        <img src="images/free-icon-telegram-2111646.png" alt="TG" class="soc-img"> Telegram
+      </a>
+
+      <a href="https://chat.whatsapp.com/HswV13W2cLyAxVpJfPEC1D" target="_blank" class="soc wa">
+        <img src="images/free-icon-whatsapp-5968841.png" alt="WA" class="soc-img"> WhatsApp
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+  <section class="map container">
+    <h2 class="title-section">Мы находимся здесь — приходите в гости!</h2>
+
+    <iframe 
+      src="https://yandex.ru/map-widget/v1/?ll=39.961232%2C44.679410&z=16&pt=39.961232,44.679410,pm2rdm" 
+      width="100%" 
+      height="400" 
+      frameborder="0">
+    </iframe>
+
+  </section>
+<a href="#" class="to-top">↑</a>
+</main>
+
+<footer class="footer-new">
+
+  <div class="container footer-grid">
+
+    <div class="footer-box">
+      <h3>Чайный дом «Уют»</h3>
+      <p>
+        Тёплый чай, домашние десерты и атмосфера спокойствия каждый день.
+        Место, куда хочется возвращаться снова.
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Навигация</h4>
+      <a href="index.html">Главная</a>
+      <a href="menu.html">Меню</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+
+    <div class="footer-box">
+      <h4>Контакты</h4>
+      <p>📍 Майкоп, ст. Ханская, ул. Ленина 54</p>
+      <p>📞 +7 (962) 861-08-15</p>
+      <p>🕐 Ежедневно: 10:00 – 22:00</p>
+      <p>✉ tea-uyut@mail.ru</p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Мы онлайн</h4>
+      <a href="https://ok.ru/profile/910107574847">Одноклассники</a>
+      <a href="https://vk.com/bvfh1997">VK</a>
+      <a href="https://t.me/Tetokago">Telegram</a>
+      <a href="https://chat.whatsapp.com/HswV13W2cLyAxVpJfPEC1D">WhatsApp</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Чайный дом «Уют»</span>
+    <span>Сделано с теплом ☕</span>
+  </div>
+
+</footer>
+
+<div id="side-navigation-panel" class="side-nav-sidebar">
+    <div class="side-nav-header">
+      <h3>Навигация</h3>
+      <a href="#" class="side-nav-close-btn" title="Свернуть меню">×</a>
+    </div>
+    
+    <div class="side-nav-links">
+      <a href="index.html">🏠 Главная страница</a>
+      <a href="menu.html">🍵 Наше Чайное Меню</a>
+      <a href="gallery.html">📸 Галерея интерьера</a>
+      <a href="about.html">🌿 О нашем Чайном Доме</a>
+      <a href="contacts.html">📞 Контакты и Бронь</a>
+    </div>
+  </div>
+
+</body>
+</html>
